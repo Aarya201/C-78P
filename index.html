@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Hi</title>
+    </head>
+    <body>
+        <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" id="img">
+        <h4 id="family_member_name"></h4>
+        <button onclick="next()">Next</button>
+        <script>
+            var images = ["https://i.postimg.cc/MKdhy06Z/family.jpg","https://i.postimg.cc/L6HcYQM0/grand-father.png", "https://i.postimg.cc/wjMnFtMX/father.jpg" , "https://i.postimg.cc/5ymDKL83/bro.jpg", "https://i.postimg.cc/JnL6wtrd/sister.jpg", "https://i.postimg.cc/bw5W5zSK/mother.jpg"];
+            var names = ["Fmaily Book","Ranbir Singh", "Diljeet Singh", "Rocky Singh", "Alia Singh", "Soni Singh"];
+            var i = 0;
+            function next()
+            {
+                i++;
+                var numbers_of_family_member_in_array = 5
+                if(i > numbers_of_family_member_in_array )
+                {
+                    i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName  = names[i];
+                document.getElementById("img").src = updatedImage;
+                document.getElementById("family_member_name").innerHTML = updatedName;
+            }
+        </script>
+    </body>
+</html>
